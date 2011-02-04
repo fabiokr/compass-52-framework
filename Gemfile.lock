@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    compass-52-plugin (0.1)
+      compass (>= 0.10)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    compass (0.10.6)
+      haml (>= 3.0.4)
+    haml (3.0.25)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  compass-52-plugin!
