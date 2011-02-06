@@ -16,6 +16,9 @@
 
 aside {
   @include column(4);
+  input {
+    @include width(3); 
+  }
 }
 
 section {
