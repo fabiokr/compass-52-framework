@@ -1,0 +1,177 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+      %title 52Framework -- brought to you by the enavu network
+      %meta{:content => "", :name => "keywords"}/
+      %meta{:content => "", :name => "description"}/
+      / this is the javascript allowing html5 to run in older browsers
+      %script{:src => "html5.js"}
+      %link{:href => "reset.css", :media => "screen", :rel => "stylesheet", :title => "html5doctor.com Reset Stylesheet", :type => "text/css"}/
+      %link{:href => "general.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+      %link{:href => "grid.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+      :css
+        /* Feel free to remove these styles, they are for demo page */
+        
+        header {height:112px; position:relative; margin-bottom:5px;}
+        	header .logo {font-size:2.5em; height:52px; padding-top:28px; font-weight:700; text-shadow:1px 1px 2px #000; color:#fff; filter: Shadow(Color=#666666, Direction=135, Strength=3);}
+        	header .statement {width:20%; text-align:right; padding-top:30px;}
+        header nav { background-color:#525252; color:#fff; height:30px;}
+        	nav ul {list-style:none;}
+        	nav ul li {float:left; margin-left:5px;}
+        	nav ul li a {display:block; color:#fff; text-decoration:none; padding:2px 8px; margin-top:8px;  
+        					-moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px;}
+        	nav ul li a:hover, nav ul li.active a {background-color:#fff; color:#000;}
+        aside {min-height:525px;}	
+        
+        	.submit, .submit:visited {
+        		background: #525252; 
+        		display: inline-block; 
+        		padding: 5px 10px 6px; 
+        		color: #fff; 
+        		-moz-border-radius: 5px; 
+        		-webkit-border-radius: 5px;
+        		box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        		border:none;
+        		text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+        		position: relative;
+        		cursor: pointer;
+        		margin-bottom:5px;
+        	}
+        
+        footer { font-size:.8em; } 
+  %body
+    .row
+      %header
+        .logo.left 52framework
+        .statement.right The framework from the future!
+        .clear
+        %nav
+          %ul
+            %li.active
+              %a{:href => "http://52framework.com/demo"} Home
+            %li
+              %a{:href => "http://52framework.com/documentation"} Documentation
+            %li
+              %a{:href => "http://52framework.com/about"} About
+            %li
+              %a{:href => "http://enavu.com"} enavu
+      .clear
+      %aside.col_4.col
+        %h2 Form Elements
+        %form
+          %fieldset
+            %legend Fieldset
+            %label{:for => "normalText"} Normal Text
+            %input#normalText.width_3{:name => "normalText", :type => "text", :value => "normal text field"}/
+            %label{:for => "email"} Email
+            %input#email.width_3{:name => "email", :type => "email", :value => "email@field.com"}/
+            %label{:for => "url"} URL
+            %input#url.width_3{:name => "url", :type => "url", :value => "url.com"}/
+            %label{:for => "required"} Required
+            %input#required.width_3{:name => "required", :required => "", :type => "text", :value => "required"}/
+            .clear
+            %button.submit submit »
+      %section.content.col_12.col
+        %article
+          %h1 This is a title h1
+          %blockquote.right
+            This is what a blockquote will look like, floated right.
+            %br>/
+            Testing a second line inside the blockquote.
+          %p
+            Lorem ipsum
+            %a{:href => "#"} link one
+            dolor sit amet, consectetur adipiscing elit. Nullam  a purus ac est dapibus feugiat eu eget nulla. Sed molestie feugiat viverra. Pellentesque consectetur, leo in faucibus congue, elit purus bibendum tellus, non tincidunt tortor mauris in sem. Suspendisse sodales metus eget sem suscipit eleifend. Proin porttitor, ante vel egestas pretium, nulla eros mollis eros, dapibus molestie lacus mi at sapien. Fusce risus risus, vulputate vel bibendum nec, accumsan non lacus.Fusce viverra mollis sapien non mattis. Suspendisse id est sapien. Aliquam quis tellus sed lorem fermentum rutrum in eget urna. Mauris ac dolor sit amet tellus tristique eleifend. Morbi venenatis ultricies eleifend. Nunc arcu lorem, feugiat pulvinar laoreet convallis, consequat sed elit. Suspendisse potenti.Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin. Aenean semper tortor nunc, dignissim malesuada arcu. Nunc nec massa a erat consectetur porta vitae eu mauris. Donec a orci dolor. Sed ac erat sed ipsum imperdiet accumsan.
+        %article
+          %h2 This is an h2
+          %p
+            Nulla facilisi. Etiam eget laoreet turpis. Duis magna odio, volutpat eu varius vitae, interdum eu felis. Pellentesque luctus tincidunt urna vel dictum. Etiam facilisis purus ut lorem aliquet eleifend. Sed porttitor semper turpis mattis iaculis. Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin.
+            %code
+              css {
+              %br
+                \-moz-border-radius: 5px;
+                %br
+                  \-webkit-border-radius: 5px;
+                  %br
+                    \-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+                    %br
+                      \-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+                      %br
+                        }
+            %p
+            Aenean semper tortor nunc, dignissim malesuada arcu. Nunc nec massa a erat consectetur porta vitae eu mauris. Donec a orci dolor. Sed ac erat sed ipsum imperdiet accumsan. Nullam commodo neque adipiscing lacus sagittis sit amet dictum urna vestibulum. Nulla sapien turpis, laoreet in lacinia sed, malesuada sit amet odio. Maecenas cursus mauris vel nunc adipiscing id bibendum ipsum faucibus.
+          %article
+            %h3 This is an h3
+            %p
+              Duis ac arcu ante, at lacinia dui. Ut eget justo in nulla rutrum mollis. Mauris euismod justo et quam bibendum laoreet volutpat lorem mollis. In hac habitasse platea dictumst.
+              %pre This is a pre tag
+              Mauris ut eleifend neque. Duis nulla metus, tempus nec varius quis, tincidunt consectetur nisi. Donec rhoncus quam vel quam bibendum rutrum. Mauris et commodo felis. Nam varius eleifend nulla quis sagittis. Quisque id tortor at dolor dictum interdum.
+          %article
+            %h2 List Elements
+            %ul
+              %li List item 1
+              %li List item 2
+            .clear{:style => "height:20px;"}
+            %h2 Other Elements Styling
+            %p
+              This is
+              %abbr{:title => "title"} abbreviation
+              %br
+                This is
+                %strong strong
+                %br
+                  This is
+                  %em emphasis
+                  %br
+                    This is
+                    %b bold text
+                    %br
+                      This is
+                      %i italic text
+                      %br
+                        This is
+                        %cite cite
+                        %br
+                          This is
+                          %small small text
+                          %br
+                            This is
+                            %big big text
+                            %br
+                              This is
+                              %del deleted text
+                              %br
+                                This is
+                                %ins inserted text
+                                %br
+                                  This is
+                                  %dfn defining instance
+                                  %br
+                                    This is
+                                    %kbd user input
+                                    %br
+                                      This is
+                                      %samp sample output
+                                      %br
+                                        This is
+                                        %q inline quotation
+                                        %br
+                                          These are
+                                          %sub subscript
+                                          and
+                                          %sup superscript
+                                          %br
+                                            This is
+                                            %var a variable
+      / end content
+      .clear{:style => "height:10px; border-bottom:1px solid #ccc;"}
+    / end wrap
+    %footer.row
+      %section.col_8.col.align_left
+        All rights reserved 52framework owned by
+        %a{:href => "http://enavu.com"} enavu network
+      %section.col_8.col.align_right
+        Have questions? Contact me at angel@enavu.com | Even if it's just to say thanks!
