@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Fabio Kreusch"]
   s.email       = ["fabio@kreusch.com.br"]
-  s.homepage    = "http://github.com/fabiokr/compass-52-plugin"
+  s.homepage    = "http://github.com/fabiokr/compass-52-framework"
   s.summary     = %q{Compass compatible port of 52 Framework}
-  s.description = %q{52 is an HTML5 and CSS3 cross-browser framework.}
+  s.description = %q{52 is an HTML5 and CSS3 grid cross-browser framework.}
 
   s.rubyforge_project = "compass-52-plugin"
 
