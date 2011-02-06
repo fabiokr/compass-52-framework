@@ -1,4 +1,6 @@
 stylesheet "styles.sass", :media => "all"
+image 'code.jpg'
+javascript 'html5.js'
 
 description "52 Framework"
 

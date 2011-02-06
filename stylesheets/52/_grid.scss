@@ -1,0 +1,31 @@
+/* 52 framework grid */
+
+$max-columns: 16 !default;
+$column-width: 40px !default;
+$gutter-width: 10px !default;
+
+@mixin width($columns) {
+  width: $column-width * $columns;
+}
+
+@mixin column($columns) {
+  margin-left: $gutter-width;
+  margin-right: $gutter-width;
+  display: inline;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  @include width($columns);
+}
+
+@mixin row($inner: false) {
+  overflow: hidden;
+  @if $inner == true {
+    margin: 0 auto;
+    width: ($column-width + $gutter-width + $gutter-width) * $max-columns;
+  } @else {
+    margin: 0 -$gutter-width;
+    display: inline-block;
+    width: auto;
+  }
+}
