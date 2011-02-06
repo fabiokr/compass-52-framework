@@ -8,4 +8,27 @@
 @import "52/general";
 @import "52/grid";
 
-//Your css goes here
+//Your css goes here; Feel free to remove this demo styles!
+
+.container, footer {
+  @include row;
+}
+
+aside {
+  @include column(4);
+}
+
+section {
+  @include column(12);
+}
+
+footer {
+  p {
+    &.align_left {
+      @include column(8);
+    }
+    &.align_right {
+      @include column(8);
+    }
+  }
+}

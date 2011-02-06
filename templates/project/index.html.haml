@@ -7,43 +7,41 @@
       %meta{:content => "", :name => "description"}/
       / this is the javascript allowing html5 to run in older browsers
       %script{:src => "javascripts/html5.js"}
-      %link{:href => "stylesheets/reset.css", :media => "screen", :rel => "stylesheet", :title => "html5doctor.com Reset Stylesheet", :type => "text/css"}/
-      %link{:href => "stylesheets/general.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-      %link{:href => "stylesheets/grid.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+      %link{:href => "stylesheets/styles.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
       :css
         /* Feel free to remove these styles, they are for demo page */
         
         header {height:112px; position:relative; margin-bottom:5px;}
-        	header .logo {font-size:2.5em; height:52px; padding-top:28px; font-weight:700; text-shadow:1px 1px 2px #000; color:#fff; filter: Shadow(Color=#666666, Direction=135, Strength=3);}
-        	header .statement {width:20%; text-align:right; padding-top:30px;}
+          header .logo {font-size:2.5em; height:52px; padding-top:28px; font-weight:700; text-shadow:1px 1px 2px #000; color:#fff; filter: Shadow(Color=#666666, Direction=135, Strength=3);}
+          header .statement {width:20%; text-align:right; padding-top:30px;}
         header nav { background-color:#525252; color:#fff; height:30px;}
-        	nav ul {list-style:none;}
-        	nav ul li {float:left; margin-left:5px;}
-        	nav ul li a {display:block; color:#fff; text-decoration:none; padding:2px 8px; margin-top:8px;  
-        					-moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px;}
-        	nav ul li a:hover, nav ul li.active a {background-color:#fff; color:#000;}
-        aside {min-height:525px;}	
+          nav ul {list-style:none;}
+          nav ul li {float:left; margin-left:5px;}
+          nav ul li a {display:block; color:#fff; text-decoration:none; padding:2px 8px; margin-top:8px;  
+                  -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px;}
+          nav ul li a:hover, nav ul li.active a {background-color:#fff; color:#000;}
+        aside {min-height:525px;}  
         
-        	.submit, .submit:visited {
-        		background: #525252; 
-        		display: inline-block; 
-        		padding: 5px 10px 6px; 
-        		color: #fff; 
-        		-moz-border-radius: 5px; 
-        		-webkit-border-radius: 5px;
-        		box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-        		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-        		-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-        		border:none;
-        		text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-        		position: relative;
-        		cursor: pointer;
-        		margin-bottom:5px;
-        	}
+          .submit, .submit:visited {
+            background: #525252; 
+            display: inline-block; 
+            padding: 5px 10px 6px; 
+            color: #fff; 
+            -moz-border-radius: 5px; 
+            -webkit-border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            border:none;
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+            position: relative;
+            cursor: pointer;
+            margin-bottom:5px;
+          }
         
         footer { font-size:.8em; } 
   %body
-    .row
+    .container
       %header
         .logo.left 52framework
         .statement.right The framework from the future!
@@ -59,7 +57,7 @@
             %li
               %a{:href => "http://enavu.com"} enavu
       .clear
-      %aside.col_4.col
+      %aside
         %h2 Form Elements
         %form
           %fieldset
@@ -74,7 +72,7 @@
             %input#required.width_3{:name => "required", :required => "", :type => "text", :value => "required"}/
             .clear
             %button.submit submit »
-      %section.content.col_12.col
+      %section.content
         %article
           %h1 This is a title h1
           %blockquote.right
@@ -166,12 +164,10 @@
                                           %br
                                             This is
                                             %var a variable
-      / end content
       .clear{:style => "height:10px; border-bottom:1px solid #ccc;"}
-    / end wrap
-    %footer.row
-      %section.col_8.col.align_left
+    %footer
+      %p.align_left
         All rights reserved 52framework owned by
         %a{:href => "http://enavu.com"} enavu network
-      %section.col_8.col.align_right
+      %p.align_right
         Have questions? Contact me at angel@enavu.com | Even if it's just to say thanks!
