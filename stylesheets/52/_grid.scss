@@ -20,7 +20,7 @@ $gutter-width: 10px !default;
 
 @mixin row($inner: false) {
   overflow: hidden;
-  @if $inner == true {
+  @if $inner == false {
     margin: 0 auto;
     width: ($column-width + $gutter-width + $gutter-width) * $max-columns;
   } @else {
