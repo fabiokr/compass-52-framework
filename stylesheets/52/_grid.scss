@@ -4,8 +4,12 @@ $max-columns: 16 !default;
 $column-width: 40px !default;
 $gutter-width: 10px !default;
 
-@mixin width($columns) {
-  width: $column-width * $columns;
+@mixin width($columns, $side_gutters: false) {
+  @if $side_gutters == true {
+    width: ($column-width + ($gutter-width * 2)) * ($columns);
+  } @else {
+    width: ($column-width + ($gutter-width * 2)) * ($columns - 1) + $column-width;
+  }
 }
 
 @mixin column($columns) {
@@ -22,7 +26,7 @@ $gutter-width: 10px !default;
   overflow: hidden;
   @if $inner == false {
     margin: 0 auto;
-    width: ($column-width + $gutter-width + $gutter-width) * $max-columns;
+    @include width($max-columns, true);
   } @else {
     margin: 0 -$gutter-width;
     display: inline-block;
