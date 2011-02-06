@@ -1,4 +1,4 @@
-stylesheet "styles.sass", :media => "all"
+stylesheet "styles.scss", :media => "all"
 image 'code.jpg'
 javascript 'html5.js'
 html 'index.html.haml'
