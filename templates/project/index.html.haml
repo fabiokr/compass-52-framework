@@ -39,7 +39,14 @@
             margin-bottom:5px;
           }
         
-        footer { font-size:.8em; } 
+        footer { font-size:.8em; }
+        .grid p {
+          font:6em "Trebuchet MS", Arial, Helvetica, sans-serif;
+          color: #000;
+          text-align: center;
+          border: 1px solid #000;
+          margin: 0 0 20px 0;
+        }
   %body
     .container
       %header
@@ -77,7 +84,7 @@
           %h1 This is a title h1
           %blockquote.right
             This is what a blockquote will look like, floated right.
-            %br>/
+            %br/
             Testing a second line inside the blockquote.
           %p
             Lorem ipsum
@@ -89,16 +96,16 @@
             Nulla facilisi. Etiam eget laoreet turpis. Duis magna odio, volutpat eu varius vitae, interdum eu felis. Pellentesque luctus tincidunt urna vel dictum. Etiam facilisis purus ut lorem aliquet eleifend. Sed porttitor semper turpis mattis iaculis. Vivamus a turpis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi blandit erat eget purus gravida nec aliquam lectus sollicitudin.
             %code
               css {
-              %br
-                \-moz-border-radius: 5px;
-                %br
-                  \-webkit-border-radius: 5px;
-                  %br
-                    \-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-                    %br
-                      \-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-                      %br
-                        }
+              %br/
+              \-moz-border-radius: 5px;
+              %br/
+              \-webkit-border-radius: 5px;
+              %br/
+              \-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+              %br/
+              \-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+              %br/
+              \}
             %p
             Aenean semper tortor nunc, dignissim malesuada arcu. Nunc nec massa a erat consectetur porta vitae eu mauris. Donec a orci dolor. Sed ac erat sed ipsum imperdiet accumsan. Nullam commodo neque adipiscing lacus sagittis sit amet dictum urna vestibulum. Nulla sapien turpis, laoreet in lacinia sed, malesuada sit amet odio. Maecenas cursus mauris vel nunc adipiscing id bibendum ipsum faucibus.
           %article
@@ -115,56 +122,97 @@
             .clear{:style => "height:20px;"}
             %h2 Other Elements Styling
             %p
-              This is
-              %abbr{:title => "title"} abbreviation
-              %br
-                This is
-                %strong strong
-                %br
-                  This is
-                  %em emphasis
-                  %br
-                    This is
-                    %b bold text
-                    %br
-                      This is
-                      %i italic text
-                      %br
-                        This is
-                        %cite cite
-                        %br
-                          This is
-                          %small small text
-                          %br
-                            This is
-                            %big big text
-                            %br
-                              This is
-                              %del deleted text
-                              %br
-                                This is
-                                %ins inserted text
-                                %br
-                                  This is
-                                  %dfn defining instance
-                                  %br
-                                    This is
-                                    %kbd user input
-                                    %br
-                                      This is
-                                      %samp sample output
-                                      %br
-                                        This is
-                                        %q inline quotation
-                                        %br
-                                          These are
-                                          %sub subscript
-                                          and
-                                          %sup superscript
-                                          %br
-                                            This is
-                                            %var a variable
+              This is <abbr title="title">abbreviation</abbr>
+              %br/
+              This is <strong>strong</strong>
+              %br/
+              This is <em>emphasis</em>
+              %br/
+              This is <b>bold text</b>
+              %br/
+              This is <i>italic text</i>
+              %br/
+              This is <cite>cite</cite>
+              %br/
+              This is <small>small text</small>
+              %br/
+              This is <big>big text</big>
+              %br/
+              This is <del>deleted text</del>
+              %br/
+              This is <ins>inserted text</ins>
+              %br/
+              This is <dfn>defining instance</dfn>
+              %br/
+              This is <kbd>user input</kbd>
+              %br/
+              This is <samp>sample output</samp>
+              %br/
+              This is <q>inline quotation</q>
+              %br/
+              These are <sub>subscript</sub> and <sup>superscript</sub
+              %br/
+              This is <var>a variable</var>
       .clear{:style => "height:10px; border-bottom:1px solid #ccc;"}
+    .grid
+      .row
+        .col_16
+          %p 16
+  
+      .row
+        .col_8
+          %p 8
+          .row
+            .col_4
+              %p 4
+            .col_4
+              %p 4
+        .col_8
+          %p 8
+      .clear
+  
+      .row
+        - (1..16).each do |i|
+          %div{:class => "col_1"}
+            %p 1
+  
+      .row
+        .col_10
+          %p 10
+        .col_6
+          %p 6
+          .row
+            .col_3
+              %p 3
+            .col_3
+              %p 3
+  
+      .row
+        .col_4
+          %p 4
+        .col_12
+          %p 12
+        .col_5
+          %p 5
+        .col_11
+          %p 11
+        .col_6
+          %p 6
+        .col_10
+          %p 10
+        .col_7
+          %p 7
+        .col_9
+          %p 9
+        .col_4
+          %p 4
+        .col_4
+          %p 4
+        .col_4
+          %p 4
+        .col_4
+          %p 4
+
     %footer
       %p.align_left
         All rights reserved 52framework owned by

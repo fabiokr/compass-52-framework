@@ -12,24 +12,48 @@ $gutter-width: 10px !default;
   }
 }
 
-@mixin column($columns) {
+.col {
   margin-left: $gutter-width;
   margin-right: $gutter-width;
   display: inline;
   overflow: hidden;
   float: left;
   position: relative;
+}
+
+.row {
+  overflow: hidden;
+  margin: 0 auto;
+  @include width($max-columns, true);
+}
+
+.inner_row {
+  margin: 0 -$gutter-width;
+  display: inline-block;
+  width: auto;
+}
+
+.row .row {
+  @extend .inner_row;
+}
+
+@mixin column($columns) {
+  @extend .col;
   @include width($columns);
 }
 
 @mixin row($inner: false) {
-  overflow: hidden;
-  @if $inner == false {
-    margin: 0 auto;
-    @include width($max-columns, true);
-  } @else {
-    margin: 0 -$gutter-width;
-    display: inline-block;
-    width: auto;
+  @extend .row;
+  @if $inner == true {
+    @extend .inner_row;
+  }
+}
+
+@for $i from 1 through $max-columns {
+  .col_#{$i} {
+    @include column($i)
+  }
+  .width_#{$i} {
+    @include width($i)
   }
 }
