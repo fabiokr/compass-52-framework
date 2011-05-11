@@ -1,5 +1,5 @@
 stylesheet "styles.scss", :media => "all"
-javascript 'modernizr-1.7.min.js', 'selectivizr.js'
+javascript 'modernizr.js', 'selectivizr.js'
 html 'index.html.erb'
 
 description "52 Framework"
