@@ -5,8 +5,10 @@
 //$gutter-width: 10px;
 
 @import "52/reset";
+@import "52/css3";
 @import "52/general";
 @import "52/grid";
+@import "52/forms";
 
 //Your css goes here; Feel free to remove this demo styles!
 
@@ -17,7 +19,7 @@
 aside {
   @include column(4);
   input {
-    @include width(3); 
+    @include width(3);
   }
 }
 
@@ -35,3 +37,4 @@ footer {
     }
   }
 }
+
