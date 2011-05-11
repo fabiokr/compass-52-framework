@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "compass-52-plugin"
-  s.version     = "0.1"
+  s.version     = "0.2"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Fabio Kreusch"]
   s.email       = ["fabio@kreusch.com.br"]
@@ -20,3 +20,4 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.require_paths = ["lib"]
 end
+
