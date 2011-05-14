@@ -1,0 +1,39 @@
+== 52 Framework Compass Plugin
+
+This plugin adds 52 Framework to Compass (http://compass-style.org/).
+
+For more information, visit the official site at http://www.52framework.com
+
+
+=== Installation
+
+    gem install compass-52-plugin
+
+
+=== Getting Started
+
+To create a Compass project using 52 Framework, enter:
+
+    compass create -r fiftytwo my_project --using 52
+
+The above command will generate a +styles.sass+ file with the framework stylesheets included.
+
+
+=== Populating the Grid
+
+To set an element as a row, use the +row+ mixin:
+
+    header
+      @include row
+
+If the row is an inner row (a row inside another row), use +row+ with parameter setted as +true+:
+
+    header
+      .left-block
+        @include row(true)
+
+To calculate column widths, use the +column+ mixin specifying the number of columns as the parameter:
+
+    article
+      @include column(5)
+

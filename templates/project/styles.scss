@@ -7,31 +7,36 @@
 @import "52/reset";
 @import "52/general";
 @import "52/grid";
+@import "52/forms";
 
 //Your css goes here; Feel free to remove this demo styles!
 
-.container, footer {
+header, section, footer {
   @include row;
 }
 
-aside {
-  @include column(4);
-  input {
-    @include width(3); 
-  }
+header {
+        .logo {
+                @include column(7);
+        }
+        nav {
+                @include column(9);
+        }
 }
 
 section {
-  @include column(12);
+        &#forms {
+                form {
+                        @include column(7);
+                }
+        }
+        &#styled {
+                div.left {@include column(9);}
+                div.right {@include column(7);}
+        }
 }
 
-footer {
-  p {
-    &.align_left {
-      @include column(8);
-    }
-    &.align_right {
-      @include column(8);
-    }
-  }
+.info {
+       @include column(16);
 }
+

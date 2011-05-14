@@ -5,55 +5,56 @@ $column-width: 40px !default;
 $gutter-width: 10px !default;
 
 @mixin width($columns, $side_gutters: false) {
-  @if $side_gutters == true {
-    width: ($column-width + ($gutter-width * 2)) * ($columns);
-  } @else {
-    width: ($column-width + ($gutter-width * 2)) * ($columns - 1) + $column-width;
-  }
+        @if $side_gutters == true {
+                width: ($column-width + ($gutter-width * 2)) * ($columns);
+        } @else {
+                width: ($column-width + ($gutter-width * 2)) * ($columns - 1) + $column-width;
+        }
 }
 
 .col {
-  margin-left: $gutter-width;
-  margin-right: $gutter-width;
-  display: inline;
-  overflow: hidden;
-  float: left;
-  position: relative;
+        margin-left: $gutter-width;
+        margin-right: $gutter-width;
+        display: inline;
+        overflow: hidden;
+        float: left;
+        position: relative;
 }
 
 .row {
-  overflow: hidden;
-  margin: 0 auto;
-  @include width($max-columns, true);
+        overflow: hidden;
+        margin: 0 auto;
+        @include width($max-columns, true);
 }
 
 .inner_row {
-  margin: 0 -$gutter-width;
-  display: inline-block;
-  width: auto;
+        margin: 0 -$gutter-width;
+        width: auto;
+        display: inline-block;
 }
 
 .row .row {
-  @extend .inner_row;
+        @extend .inner_row;
 }
 
 @mixin column($columns) {
-  @extend .col;
-  @include width($columns);
+        @extend .col;
+        @include width($columns);
 }
 
 @mixin row($inner: false) {
-  @extend .row;
-  @if $inner == true {
-    @extend .inner_row;
-  }
+        @extend .row;
+        @if $inner == true {
+                @extend .inner_row;
+        }
 }
 
 @for $i from 1 through $max-columns {
-  .col_#{$i} {
-    @include column($i)
-  }
-  .width_#{$i} {
-    @include width($i)
-  }
+        .col_#{$i} {
+                @include column($i)
+        }
+        .width_#{$i} {
+                @include width($i)
+        }
 }
+

@@ -1,0 +1,8 @@
+== 0.0.2
+
+* Update to 52Framework 2.0.4
+
+== 0.0.1
+
+* Release with 52Framework 1.0
+
