@@ -5,7 +5,6 @@
 //$gutter-width: 10px;
 
 @import "52/reset";
-@import "52/css3";
 @import "52/general";
 @import "52/grid";
 @import "52/forms";
@@ -29,11 +28,6 @@ section {
         &#forms {
                 form {
                         @include column(7);
-                }
-        }
-        &#css3 {
-                div.samples {
-                        > div {@include column(4);}
                 }
         }
         &#styled {

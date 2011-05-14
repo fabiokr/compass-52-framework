@@ -4,14 +4,13 @@
     <meta charset=utf-8>
     <title>52framework - The framework from the future, HTML5, CSS3, and more!</title>
 
-    <script src="../../js/modernizr.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
-    <!--[if IE]><script type="text/javascript" src="../../canvas/excanvas.js"></script><![endif]-->
+    <script src="modernizr.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
 
     <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" media="screen" />
 
     <!-- this script is needed for using advanced css selectors in your css -->
     <!--[if (gte IE 6)&(lte IE 8)]>
-    	<script src="js/selectivizr.js"></script>
+    	<script src="selectivizr.js"></script>
     <![endif]-->
 
     <!-- the following style is for demonstartion purposes only and is not needed for anything but inspiration -->
@@ -45,7 +44,7 @@
     <nav>
       	<ul>
             <li><a href="#forms">forms</a></li>
-            <li><a href="#css3">css3</a></li>
+            <li><a href="#grid">grid</a></li>
             <li><a href="#styled">styled</a></li>
         	  <li class="last"><a href="http://www.enavu.com">enavu network</a></li>
         </ul>
@@ -79,34 +78,6 @@
           </fieldset>
       </form>
     <div class="clear" style="height:15px;"></div>
-  </section>
-
-  <!-- this section shows off the CSS3 properties you can use today, with very little to no problems with older browsers -->
-  <section id="css3">
-	  <h2 class="fontface">CSS3 Examples</h2>
-    <div class="samples">
-      <div>
-      	<h4 class="shadow">This text has a shadow</h4>
-        <h4 class="shadow_multiple">Multiple Shadows here</h4>
-        <div class="box_shadow">This box has a shadow</div>
-        <div class="box_shadow_multiple" style="width:90px; height:80px; margin:10px auto; border:1px solid #fff;">This box has a lot of shadows inside and out</div>
-      </div>
-      <div>
-      	<div class="rounded">This box is rounded</div>
-        <div class="rounded_top_right">This box is only rounded on the top right</div>
-      </div>
-      <div>
-      	<div class="rotate">This box is rotated</div>
-        <div class="fontface">This font uses a custom @font-face font.</div>
-      </div>
-      <div>
-      	<div class="gradient">This box has a gradient</div>
-        <div class="gradient_radial" style="height:80px;">This boxes gradient is radial</div>
-      </div>
-    </div>
-    <div class="info">
-    	<a href="http://www.css3.info/preview/" class="documentation">Some Nice CSS3 Documentation</a>
-    </div>
   </section>
 
   <!-- this section shows off the grid and how it can be used -->
