@@ -12,3 +12,28 @@
 
 //Your css goes here; Feel free to remove this demo styles!
 
+header, section, footer {
+  @include row;
+}
+
+header {
+        @include row;
+                .logo {
+                        @include column(7);
+                }
+                nav {
+                        @include column(9);
+                }
+}
+
+footer {
+        p {
+                &.align_left {
+                        @include column(8);
+                }
+                &.align_right {
+                        @include column(8);
+                }
+        }
+}
+
