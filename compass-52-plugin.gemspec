@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "compass", ">= 0.10"
 
-  s.files = `git ls-files`.split("\n")
+  s.files = Dir.glob("{lib,stylesheets,templates}/**/*") + %w(MIT-LICENSE README.rdoc CHANGELOG.rdoc)
 
   s.has_rdoc = false
   s.require_paths = ["lib"]
