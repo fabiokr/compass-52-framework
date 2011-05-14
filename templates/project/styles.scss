@@ -17,23 +17,32 @@ header, section, footer {
 }
 
 header {
-        @include row;
-                .logo {
-                        @include column(7);
-                }
-                nav {
-                        @include column(9);
-                }
+        .logo {
+                @include column(7);
+        }
+        nav {
+                @include column(9);
+        }
 }
 
-footer {
-        p {
-                &.align_left {
-                        @include column(8);
-                }
-                &.align_right {
-                        @include column(8);
+section {
+        &#forms {
+                form {
+                        @include column(7);
                 }
         }
+        &#css3 {
+                div.samples {
+                        > div {@include column(4);}
+                }
+        }
+        &#styled {
+                div.left {@include column(9);}
+                div.right {@include column(7);}
+        }
+}
+
+.info {
+       @include column(16);
 }
 
